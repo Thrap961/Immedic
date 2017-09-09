@@ -43,7 +43,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Heart rate *val': function(val){
-            $scope.data.push({
+            $scope.vitals.push({
                 key: 'Heart rate',
                 pr: val,
                 date: new Date()
@@ -51,7 +51,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Respiratory rate *val': function(val){
-            $scope.data.push({
+            $scope.vitals.push({
                 key: 'Resp rate',
                 value: val,
                 rr: val,
