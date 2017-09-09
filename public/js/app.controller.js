@@ -40,6 +40,13 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             });
             $scope.$apply();
         },
+        'Heart rate *val': function(val){
+            $scope.data.push({
+                key: 'Heart rate',
+                pr: val
+            });
+            $scope.$apply();
+        },
         'Respiratory rate *val': function(val){
             $scope.data.push({
                 key: 'Resp rate',
