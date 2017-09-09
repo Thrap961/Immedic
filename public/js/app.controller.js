@@ -19,7 +19,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Blood pressure *val over *val2': function(val,val2){
-            $scope.vitals.push({
+            $scope.data.push({
                 key: 'Blood pressure',
                 bps: val,
                 bpd: val2
@@ -34,7 +34,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Heart rate *val respiratory rate *val2': function(val,val2){
-            $scope.vitals.push({
+            $scope.data.push({
                 key: 'Heart rate',
                 pr: val,
                 rr: val2,
@@ -43,7 +43,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Heart rate *val': function(val){
-            $scope.vitals.push({
+            $scope.data.push({
                 key: 'Heart rate',
                 pr: val,
                 date: new Date()
@@ -51,7 +51,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Respiratory rate *val': function(val){
-            $scope.vitals.push({
+            $scope.data.push({
                 key: 'Resp rate',
                 value: val,
                 rr: val,
