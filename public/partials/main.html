@@ -27,7 +27,7 @@
 		<td width="30%">Pulse Rate</td>
 		<td width="30%">Respiratory Rate</td>
 	</thead>
-	<tr ng-repeat="item in data">
+	<tr ng-repeat="item in vitals">
 		<td>{{item.date | date:'medium'}}</td>
 		<td>{{item.bps}} / {{item.bpd}}</td>
 		<td>{{item.pr}}</td>
