@@ -32,7 +32,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             });
             $scope.$apply();
         },
-        'Heart rate *val respiratory rate *val2': function(val){
+        'Heart rate *val respiratory rate *val2': function(val,val2){
             $scope.data.push({
                 key: 'Heart rate',
                 pr: val,
