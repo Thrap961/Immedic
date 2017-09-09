@@ -17,8 +17,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.conscious = function(val) {
         $scope.conscious = val;
     }
-    $scope.pupils = function(val) {
-        $scope.pupils = val;
+    $scope.pup = function(val) {
+        $scope.pup = val;
     }
     $scope.airway = function(val) {
         $scope.airway = val;
@@ -26,8 +26,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.cpr = function(val) {
         $scope.cpr = val;
     }
-    $scope.stroke = function(val) {
-        $scope.stroke = val;
+    $scope.strok = function(val) {
+        $scope.strok = val;
     }
     $scope.injury = function(val) {
         $scope.injury = val;
@@ -102,7 +102,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Pupils *val': function(val){
-            $scope.pupils(val);
+            $scope.pup(val);
             $scope.$apply();
         },
         'airway *val': function(val){
@@ -114,7 +114,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'stroke *val': function(val){
-            $scope.stroke(val);
+            $scope.strok(val);
             $scope.$apply();
         },
         '*val injury': function(val){
