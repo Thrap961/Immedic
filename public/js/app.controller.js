@@ -1,6 +1,7 @@
 var controllers = angular.module('controllers',[]);
 
 controllers.controller("MainController",['$scope','$window',function($scope,$window){
+      
     $scope.line = 'what.....';
     $window.localStorage.setItem('data',[]);
     $window.localStorage.setItem('bp',[]);
@@ -36,7 +37,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.data.push({
                 key: 'Heart rate',
                 pr: val,
-                rr: val2
+                rr: val2,
+                date: new Date()
             });
             $scope.$apply();
         },

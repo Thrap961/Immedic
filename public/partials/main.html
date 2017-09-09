@@ -22,11 +22,13 @@ VITAL SIGNS
 
 <table id="vitals">
 	<thead>
+		<td width="10%">Date/Time</td>
 		<td width="30%">BP</td>
 		<td width="30%">Pulse Rate</td>
 		<td width="30%">Respiratory Rate</td>
 	</thead>
 	<tr ng-repeat="item in data">
+		<td>{{item.date}}</td>
 		<td>{{item.bp}}</td>
 		<td>{{item.pr}}</td>
 		<td>{{item.rr}}</td>
