@@ -3,11 +3,11 @@ var controllers = angular.module('controllers',[]);
 controllers.controller("MainController",['$scope','$window',function($scope,$window){
       
     $scope.line = 'what.....';
-    $window.localStorage.setItem('data',[]);
-    $window.localStorage.setItem('bp',[]);
+    $window.localStorage.setItem('vitals',[]);
+    $window.localStorage.setItem('pt',[]);
 
-    $scope.data = localStorage.getItem('data')||[];
-    $scope.data = localStorage.getItem('bp')||[];
+    $scope.data = localStorage.getItem('vitals')||[];
+    $scope.data = localStorage.getItem('pt')||[];
     
     $scope.check = function(val) {
         $scope.conscious = val;
@@ -19,7 +19,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Blood pressure *val over *val2': function(val,val2){
-            $scope.data.push({
+            $scope.vitals.push({
                 key: 'Blood pressure',
                 bps: val,
                 bpd: val2
@@ -34,7 +34,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Heart rate *val respiratory rate *val2': function(val,val2){
-            $scope.data.push({
+            $scope.vitals.push({
                 key: 'Heart rate',
                 pr: val,
                 rr: val2,
