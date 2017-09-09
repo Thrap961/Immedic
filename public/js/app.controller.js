@@ -45,7 +45,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         'Heart rate *val': function(val){
             $scope.data.push({
                 key: 'Heart rate',
-                pr: val
+                pr: val,
+                date: new Date()
             });
             $scope.$apply();
         },
@@ -53,7 +54,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.data.push({
                 key: 'Resp rate',
                 value: val,
-                rr: val
+                rr: val,
+                date: new Date()
             });
             $scope.$apply();
         },
