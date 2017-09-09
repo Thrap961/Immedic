@@ -8,13 +8,13 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.data = localStorage.getItem('data')||[];
     $scope.data = localStorage.getItem('bp')||[];
     
-    $scope.conscious = function(val) {
-        $scope.data = val;
+    $scope.check = function(val) {
+        $scope.conscious = val;
     }
 
     var commands = {
         'Consciousness *val': function(val){
-            $scope.conscious(val);
+            $scope.check(val);
             $scope.$apply();
         },
         'Blood pressure *val': function(val){
