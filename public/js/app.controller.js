@@ -14,22 +14,22 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.sex = function(val) {
         $scope.sex = val;
     }
-    $scope.conscious = function(val) {
+    $scope.consciousCheck = function(val) {
         $scope.conscious = val;
     }
-    $scope.pup = function(val) {
+    $scope.pupilsCheck = function(val) {
         $scope.pup = val;
     }
-    $scope.airway = function(val) {
+    $scope.airwayCheck = function(val) {
         $scope.airway = val;
     }
-    $scope.cpr = function(val) {
+    $scope.cprCheck = function(val) {
         $scope.cpr = val;
     }
-    $scope.strok = function(val) {
+    $scope.strokeCheck = function(val) {
         $scope.strok = val;
     }
-    $scope.injury = function(val) {
+    $scope.injuryCheck = function(val) {
         $scope.injury = val;
     }
 
@@ -65,7 +65,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             });
             $scope.$apply();
         },
-        'Heart rate *val': function(val){
+        'Pulse *val': function(val){
             $scope.vitals.push({
                 pr: val,
                 date: new Date()
@@ -79,7 +79,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             });
             $scope.$apply();
         },
-        'Heart rate *val respiratory rate *val2': function(val,val2){
+        'Pulse *val respiratory rate *val2': function(val,val2){
             $scope.vitals.push({
                 pr: val,
                 rr: val2,
@@ -87,7 +87,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             });
             $scope.$apply();
         },
-        'Blood pressure *val over *val2 Heart rate *val3 respiratory rate *val4': function(val,val2, val3, val4){
+        'Blood pressure *val over *val2 Pulse *val3 respiratory rate *val4': function(val,val2, val3, val4){
             $scope.vitals.push({
                 bps: val,
                 bpd: val2,
@@ -98,27 +98,27 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'Consciousness *val': function(val){
-            $scope.conscious(val);
+            $scope.consciousCheck(val);
             $scope.$apply();
         },
         'Pupils *val': function(val){
-            $scope.pup(val);
+            $scope.pupilsCheck(val);
             $scope.$apply();
         },
         'airway *val': function(val){
-            $scope.airway(val);
+            $scope.airwayCheck(val);
             $scope.$apply();
         },
         'cpr *val': function(val){
-            $scope.cpr(val);
+            $scope.cprCheck(val);
             $scope.$apply();
         },
         'stroke *val': function(val){
-            $scope.strok(val);
+            $scope.strokeCheck(val);
             $scope.$apply();
         },
         '*val injury': function(val){
-            $scope.injury(val);
+            $scope.injuryCheck(val);
             $scope.$apply();
         },
         'medical history' : function(val){
