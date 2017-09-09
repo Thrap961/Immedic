@@ -1,0 +1,17 @@
+body {
+    font-size: 2em;
+}
+input[type="radio"] {
+    transform: scale(2); 
+    -moz-transform: scale(2); 
+    -ms-transform: scale(2); 
+    -webkit-transform: scale(2); 
+    -o-transform: scale(2); 
+}
+input[type="radio"]:checked+label{
+    font-weight: bold;
+    background-color: yellow;
+}
+label {
+    margin-right: 1em;
+}
