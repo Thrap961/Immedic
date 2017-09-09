@@ -28,7 +28,7 @@ VITAL SIGNS
 		<td width="30%">Respiratory Rate</td>
 	</thead>
 	<tr ng-repeat="item in data">
-		<td>{{item.date}}</td>
+		<td>{{item.date | date:'yyyy-MMM-dd'}}</td>
 		<td>{{item.bp}}</td>
 		<td>{{item.pr}}</td>
 		<td>{{item.rr}}</td>
