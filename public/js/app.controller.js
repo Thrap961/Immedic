@@ -20,7 +20,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         'Blood pressure *val': function(val){
             $scope.data.push({
                 key: 'Blood pressure',
-                value: val
+                value: val,
+                bp: val
             });
             $scope.$apply();
         },
@@ -34,11 +35,19 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         'Heart rate *val': function(val){
             $scope.data.push({
                 key: 'Heart rate',
-                value: val
+                value: val,
+                pr: val
             });
             $scope.$apply();
         },
-
+        'Respiratory rate *val': function(val){
+            $scope.data.push({
+                key: 'Resp rate',
+                value: val,
+                rr: val
+            });
+            $scope.$apply();
+        },
         'Pain score *val':function(val){
             $scope.data.push({
                 key:'Pain score',

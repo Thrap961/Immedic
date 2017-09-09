@@ -19,3 +19,17 @@ VITAL SIGNS
     <br>
     <p>Value: {{item.value}}</p>
 </ul>
+
+<table id="vitals">
+	<thead>
+		<td width="30%">BP</td>
+		<td width="30%">Pulse Rate</td>
+		<td width="30%">Respiratory Rate</td>
+	</thead>
+	<tr ng-repeat="item in data">
+		<td>120 {{item.bp}}</td>
+		<td>100 {{item.pr}}</td>
+		<td>22 {{item.rr}}</td>
+	</tr>
+
+</table>
