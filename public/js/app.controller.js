@@ -8,8 +8,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.data = localStorage.getItem('data')||[];
     $scope.data = localStorage.getItem('bp')||[];
     
-    $scope.check = function(val) {
-        $scope.conscious = val;
+    $scope.conscious = function(val) {
+        $scope.data = val;
     }
 
     var commands = {
