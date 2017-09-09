@@ -1,3 +1,17 @@
+<form>
+	<fieldset id="form_loc">
+		<h3>LOC:</h3>
+		<input type="radio" name="loc" id="loc1" value="alert" ng-model="conscious" checked>
+      	<label for="loc1">Alert</label>
+		<input type="radio" name="loc" id="loc2" value="verbal" ng-model="conscious">
+      	<label for="loc2">Verbal</label>
+ 		<input type="radio" name="loc" id="loc3" value="pain" ng-model="conscious">
+      	<label for="loc3">Pain</label>
+		<input type="radio" name="loc" id="loc4" value="unresponsive" ng-model="conscious">
+      	<label for="loc4">Unresponsive</label>
+    </fieldset>
+</form>
+
 <ul ng-repeat="item in data">
     <p>Key: {{item.key}}</p>
     <br>

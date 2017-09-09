@@ -3,10 +3,20 @@ var controllers = angular.module('controllers',[]);
 controllers.controller("MainController",['$scope','$window',function($scope,$window){
     $scope.line = 'what.....';
     $window.localStorage.setItem('data',[]);
+    $window.localStorage.setItem('bp',[]);
 
     $scope.data = localStorage.getItem('data')||[];
+    $scope.data = localStorage.getItem('bp')||[];
+    
+    $scope.check = function(val) {
+        $scope.conscious = val;
+    }
 
     var commands = {
+        'Consciousness *val': function(val){
+            $scope.conscious(val);
+            $scope.$apply();
+        },
         'Blood pressure *val': function(val){
             $scope.data.push({
                 key: 'Blood pressure',
@@ -14,7 +24,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             });
             $scope.$apply();
         },
-        'GCS *val': function(val){
+        'Glasgow coma scale *val': function(val){
             $scope.data.push({
                 key: 'GCS',
                 value: val
