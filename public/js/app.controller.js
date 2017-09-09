@@ -18,11 +18,11 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.check(val);
             $scope.$apply();
         },
-        'Blood pressure *val': function(val){
+        'Blood pressure *val over *val2': function(val,val2){
             $scope.data.push({
                 key: 'Blood pressure',
-                value: val,
-                bp: val
+                bps: val,
+                bpd: val2
             });
             $scope.$apply();
         },
