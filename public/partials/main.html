@@ -124,7 +124,7 @@
 				<tr ng-repeat="item in vitals">
 					<td>{{item.date | date:'medium'}}</td>
 					<td>{{!item.bps ? "" : (item.bps + " / " + item.bpd)}}</td>
-					<td ng-class="{{item.pr>100 ? "error" : " "}}">{{item.pr}}</td>
+					<td ng-class="(item.pr-0) > 100 ? "error" : " "">{{item.pr}}</td>
 					<td>{{item.rr}}</td>
 					<td>{{item.ox}}</td>
 				</tr>
