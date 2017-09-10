@@ -19,7 +19,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.allergy = localStorage.getItem('allergy')||[];
     $scope.med = localStorage.getItem('med')||[];
     $scope.treat = localStorage.getItem('treat')||[];
-    $scope.treat = localStorage.getItem('ssn')||[];
+    $scope.ssn = localStorage.getItem('ssn')||[];
     
     $scope.sex = function(val) {
         $scope.sex = val;
