@@ -46,7 +46,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     var commands = {
         'ssn *val':function(val){
             $scope.ssn.push({
-            value: val
+                value: val
             })  
         },  
         'Name *val':function(val){
