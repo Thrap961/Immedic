@@ -113,12 +113,12 @@
 
 <div class="ui one column grid container">
 	<div class="column">
-		<table id="vitals">
+		<table id="vitals" class="ui celled padded table">
 				<thead>
-					<td width="20%">Date/Time</td>
-					<td width="30%">BP</td>
-					<td width="30%">Pulse</td>
-					<td width="30%">Respiratory Rate</td>
+					<th width="20%">Date/Time</th>
+					<th width="30%">BP</th>
+					<th width="30%">Pulse</th>
+					<th width="30%">Respiratory Rate</th>
 				</thead>
 				<tr ng-repeat="item in vitals">
 					<td>{{item.date | date:'medium'}}</td>
