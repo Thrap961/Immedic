@@ -10,6 +10,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $window.localStorage.setItem('allergy',[]);
     $window.localStorage.setItem('med',[]);
     $window.localStorage.setItem('treat',[]);
+    $window.localStorage.setItem('ssn',[]);
 
     $scope.vitals = localStorage.getItem('vitals')||[];
     $scope.name = localStorage.getItem('name')||[];
@@ -18,6 +19,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.allergy = localStorage.getItem('allergy')||[];
     $scope.med = localStorage.getItem('med')||[];
     $scope.treat = localStorage.getItem('treat')||[];
+    $scope.treat = localStorage.getItem('ssn')||[];
     
     $scope.sex = function(val) {
         $scope.sex = val;
@@ -42,6 +44,11 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     }
 
     var commands = {
+        'ssn *val':function(val){
+            $scope.ssn.push({
+            value: val
+            })  
+        }  
         'Name *val':function(val){
             $scope.name.push({
                 value: val
@@ -58,7 +65,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.sex(val);
             $scope.$apply();
         },
-        'Blood pressure *val over *val2 Pulse *val3 respiratory rate *val4 oximetry *val5': function(val,val2, val3, val4, val5){
+        'bp *val over *val2 Pulse *val3 respiratory rate *val4 sats *val5': function(val,val2, val3, val4, val5){
             $scope.vitals.push({
                 bps: val,
                 bpd: val2,
@@ -77,7 +84,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             });
             $scope.$apply();
         },
-        'Blood pressure *val over *val2': function(val,val2){
+        'bp *val over *val2': function(val,val2){
             $scope.vitals.push({
                 bps: val,
                 bpd: val2,
@@ -85,7 +92,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             });
             $scope.$apply();
         },
-        'Oximetry *val': function(val){
+        'sats *val': function(val){
             $scope.vitals.push({
                 ox: val,
                 date: new Date()
@@ -154,7 +161,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             })
             $scope.$apply();
         },
-        'medications *val': function(val){
+        'meds *val': function(val){
             $scope.med.push({
                 medication: val
             })
