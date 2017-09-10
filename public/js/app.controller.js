@@ -48,7 +48,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.ssn.push({
             value: val
             })  
-        }  
+        },  
         'Name *val':function(val){
             $scope.name.push({
                 value: val
