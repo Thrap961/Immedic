@@ -29,3 +29,6 @@ label {
 div.column {
     border: none;
 }
+#results {
+    visibility: hidden;
+}
