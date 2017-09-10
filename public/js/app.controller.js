@@ -51,10 +51,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         for (var i=1;i<=3;i++) {
             var sep = '';
         for (var j=1;j<=1;j++) {
-                if (document.getElementById(i + '_' + j).checked) {
-                    data +=  sep + document.getElementById(i + '_' + j).value;
-                    sep = ',';
-                }
+                  data +=  sep + document.getElementById(i + '_' + j).value;
+                  sep = ',';
             }
             data += '\r\n';
         }
@@ -81,10 +79,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         for (var i=11;i<=14;i++) {
         var sep = '';
             for (var j=1;j<=1;j++) {
-                if (document.getElementById(i + '_' + j).checked) {
-                    data +=  sep + document.getElementById(i + '_' + j).value;
-                    sep = ',';
-                }
+                  data +=  sep + document.getElementById(i + '_' + j).value;
+                  sep = ',';
             }
             data += '\r\n';
         }
