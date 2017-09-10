@@ -7,11 +7,17 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $window.localStorage.setItem('name',[]);
     $window.localStorage.setItem('age',[]);
     $window.localStorage.setItem('hist',[]);
+    $window.localStorage.setItem('allergy',[]);
+    $window.localStorage.setItem('med',[]);
+    $window.localStorage.setItem('treat',[]);
 
     $scope.vitals = localStorage.getItem('vitals')||[];
     $scope.name = localStorage.getItem('name')||[];
     $scope.age = localStorage.getItem('age')||[];
     $scope.hist = localStorage.getItem('hist')||[];
+    $scope.hist = localStorage.getItem('allergy')||[];
+    $scope.hist = localStorage.getItem('med')||[];
+    $scope.hist = localStorage.getItem('treat')||[];
     
     $scope.sex = function(val) {
         $scope.sex = val;
@@ -125,63 +131,36 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         },
         'stroke *val': function(val){
             if (val == 'no' || val == 'facial drop'|| val == 'arm drift'||val == 'speech impaired') {
-              $scope.strokeCheck(val);
-              $scope.$apply();
-            }  
-        },
-        'Respiratory rate *val': function(val){
-            $scope.vitals.push({
-                rr: val,
-                date: new Date()
-            });
-            $scope.$apply();
-        },
-        'Pulse *val respiratory rate *val2': function(val,val2){
-            $scope.vitals.push({
-                pr: val,
-                rr: val2,
-                date: new Date()
-            });
-            $scope.$apply();
-        },
-        'Blood pressure *val over *val2 Pulse *val3 respiratory rate *val4': function(val,val2, val3, val4){
-            $scope.vitals.push({
-                bps: val,
-                bpd: val2,
-                pr: val3,
-                rr: val4,
-                date: new Date()
-            });
-            $scope.$apply();
+                $scope.strokeCheck(val);
+                $scope.$apply();
+            }
         },
         '*val injury': function(val){
             if (val == 'none' || val == 'blunt'|| val == 'penetrating'||val == 'burn') {
                 $scope.injuryCheck(val);
                 $scope.$apply();
             }
-            $scope.injuryCheck(val);
-            $scope.$apply();
         },
-        'medical history' : function(val){
+        'medical history *val' : function(val){
             $scope.hist.push({
                 medHist: val
             })
             $scope.$apply();
         },
         'allergies *val': function(val){
-            $scope.hist.push({
+            $scope.allery.push({
                 allergies: val
             })
             $scope.$apply();
         },
-        'medication *val': function(val){
-            $scope.hist.push({
+        'medications *val': function(val){
+            $scope.med.push({
                 medication: val
             })
             $scope.$apply();
         },
         'treatment *val': function(val){
-            $scope.hist.push({
+            $scope.treat.push({
                 treatment: val
             })
             $scope.$apply();
