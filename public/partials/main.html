@@ -123,10 +123,10 @@
 				</thead>
 				<tr ng-repeat="item in vitals">
 					<td>{{item.date | date:'medium'}}</td>
-					<td ng-class="{'error': (item.bps-0) > 139, 'warning': (item.bps-0) < 99 && (item.bps-0) != 0}">{{!item.bps ? "" : (item.bps + " / " + item.bpd)}}</td>
-					<td ng-class="{'error': (item.pr-0) > 100, 'warning': (item.pr-0) < 50 && (item.pr-0) != 0}"><i ng-class="{'attention icon': (item.pr-0) > 100}"></i>{{item.pr}}</td>
-					<td ng-class="{'error': (item.rr-0) > 20, 'warning': (item.rr-0) < 12 && (item.rr-0) != 0}">{{item.rr}}</td>
-					<td ng-class="{'warning': (item.ox-0) < 85 && (item.ox-0) != 0}">{{item.ox}}</td>
+					<td ng-class="{'error': (item.bps-0) > 139, 'warning': (item.bps-0) < 99 && (item.bps-0) != 0}"><i ng-class="{'arrow up icon': (item.bps-0) > 139, 'arrow down icon': (item.bps-0) < 99 && (item.bps-0) != 0}"></i>{{!item.bps ? "" : (item.bps + " / " + item.bpd)}}</td>
+					<td ng-class="{'error': (item.pr-0) > 100, 'warning': (item.pr-0) < 50 && (item.pr-0) != 0}"><i ng-class="{'arrow up icon': (item.pr-0) > 100, 'arrow down icon': (item.pr-0) < 50 && (item.pr-0) != 0}"></i>{{item.pr}}</td>
+					<td ng-class="{'error': (item.rr-0) > 20, 'warning': (item.rr-0) < 12 && (item.rr-0) != 0}"><i ng-class="{'arrow up icon': (item.rr-0) > 20, 'arrow down icon': (item.rr-0) < 12 && (item.rr-0) != 0}"></i>{{item.rr}}</td>
+					<td ng-class="{'warning': (item.ox-0) < 82 && (item.ox-0) != 0}"><i ng-class="{'arrow down icon': (item.ox-0) < 82 && (item.ox-0) != 0}"></i>{{item.ox}}</td>
 				</tr>
 			</table>
 	</div>
