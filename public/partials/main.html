@@ -12,7 +12,7 @@
 	<div class="row">
 		<div class="column">
 			<h1 class="ui header">EMS Patient Care Report</h1>
-			<span>{{new Date() | date:'medium'}}</span>
+			<span><script>document.write(new Date())</script></span>
 		</div>
 		<div class="column">
 			<button class="ui primary right floated button" ng-click="exportData()">Export fields to CSV</button>
