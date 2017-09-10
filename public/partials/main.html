@@ -10,7 +10,8 @@
 			<h1 class="ui header">EMS Patient Care Report</h1>
 		</div>
 		<div class="column">
-			<button class="ui primary button" ng-click="exportData()">Export to CSV</button>
+			<button class="ui primary right floated button" ng-click="exportData()">Export fields to CSV</button>
+			<button class="ui right floated button" ng-click="exportToExcel('#table1')">Export table to CSV</button>
 		</div>
 </div>
 
@@ -156,7 +157,7 @@
 			<span class="obs">Past Medical History:</span>
 		</div>
 		<div class="nine wide column">
-			<textarea id="11_1" rows="3" ng-model="histjoin"></textarea>
+			<textarea id="11_1" rows="3" width="100%" ng-model="histjoin"></textarea>
 		</div>
 	</div>
 
@@ -165,7 +166,7 @@
 			<span class="obs">Medications:</span>
 		</div>
 		<div class="nine wide column">
-			<textarea id="12_1" rows="3" ng-model="medjoin"></textarea>
+			<textarea id="12_1" rows="3" width="100%" ng-model="medjoin"></textarea>
 		</div>
 	</div>
 
@@ -174,7 +175,7 @@
 			<span class="obs">Allergies:</span>
 		</div>
 		<div class="nine wide column">
-			<textarea id="13_1" rows="3" ng-model="allergyjoin"></textarea>
+			<textarea id="13_1" rows="3" width="100%" ng-model="allergyjoin"></textarea>
 		</div>
 	</div>
 
@@ -183,7 +184,7 @@
 			<span class="obs">Treatment:</span>
 		</div>
 		<div class="nine wide column">
-			<textarea id="14_1" rows="3" ng-model="treatjoin"></textarea>
+			<textarea id="14_1" rows="3" width="100%" ng-model="treatjoin"></textarea>
 		</div>
 	</div>
 
