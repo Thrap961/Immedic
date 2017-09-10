@@ -46,7 +46,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.injuryCheck = function(val) {
         $scope.injury = val;
     }
-    function exportData() {
+    $scope.exportData = function() {
       var data = '';
         for (var i=1;i<=3;i++) {
           var sep = '';
