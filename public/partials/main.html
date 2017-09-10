@@ -144,7 +144,7 @@
 	<div class="column">
 		<fieldset>
 			<span class="obs">Past Medical History:</span>
-			<textarea rows="3"cols="80">{{hist[0].medHist}}</textarea>
+                    	<textarea rows="3"cols="80"><span ng-repeat="item in hist">{{item.medHist}}</span></textarea>
 		</fieldset>
 	</div>
 	<div class="column">
