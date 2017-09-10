@@ -11,6 +11,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $window.localStorage.setItem('med',[]);
     $window.localStorage.setItem('treat',[]);
     $window.localStorage.setItem('ssn',[]);
+    $window.localStorage.setItem('comp',[]);
 
     $scope.vitals = localStorage.getItem('vitals')||[];
     $scope.name = localStorage.getItem('name')||[];
@@ -20,6 +21,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.med = localStorage.getItem('med')||[];
     $scope.treat = localStorage.getItem('treat')||[];
     $scope.ssn = localStorage.getItem('ssn')||[];
+    $scope.comp = localStorage.getItem('comp')||[];
+    $scope.compjoin = "";
     $scope.histjoin = "";
     $scope.allergyjoin = "";
     $scope.medjoin = "";
@@ -76,7 +79,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
             data += '\r\n';
         }
-        for (var i=11;i<=14;i++) {
+        for (var i=11;i<=15;i++) {
         var sep = '';
             for (var j=1;j<=1;j++) {
                   data +=  sep + document.getElementById(i + '_' + j).value;
@@ -84,9 +87,6 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
             data += '\r\n';
         }
-        //data +=  sep + document.getElementById('vitals');
-        //sep = ',';
-        //data += '\r\n';
         var exportLink = document.createElement('a');
         exportLink.setAttribute('href', 'data:text/csv;base64,' + window.btoa(data));
         exportLink.appendChild(document.createTextNode('test.csv'));
@@ -227,6 +227,17 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
                 $scope.injuryCheck(val);
                 $scope.$apply();
             }
+        },
+        'chief complaint *val' : function(val){
+            $scope.comp.push({  
+                complaint: val
+            })
+            if ($scope.compjoin == "") {
+                  $scope.compjoin = val;
+            } else {
+                  $scope.compjoin = $scope.compjoin + ", " + val;  
+            }
+            $scope.$apply();
         },
         'past medical history *val' : function(val){
             $scope.hist.push({  
