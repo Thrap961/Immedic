@@ -126,7 +126,7 @@
 					<td>{{!item.bps ? "" : (item.bps + " / " + item.bpd)}}</td>
 					<td ng-class="{'error': (item.pr-0) > 100, 'error': (item.pr-0) < 50}"><i ng-class="{'attention icon': (item.pr-0) > 100, 'error': (item.pr-0) < 50}"></i>{{item.pr}}</td>
 					<td ng-class="{'error': (item.rr-0) > 20, 'error': (item.rr-0 < 12}">{{item.rr}}</td>
-					<td ng-class="{'error': (item.ox-0) < 85}</td>
+					<td ng-class="{'error': (item.ox-0) < 85}"></td>
 				</tr>
 			</table>
 	</div>
