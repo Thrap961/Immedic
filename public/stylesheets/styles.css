@@ -1,0 +1,29 @@
+body {
+    width: 90%;
+    margin: 1.5em;
+}
+fieldset {
+    border: 1px solid #DDD;
+    margin-bottom: 0.5em;
+}
+.obs {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 1em;
+}
+input[type="radio"] {
+    transform: scale(2); 
+    -moz-transform: scale(2); 
+    -ms-transform: scale(2); 
+    -webkit-transform: scale(2); 
+    -o-transform: scale(2);
+    margin-right: 0.6em
+}
+input[type="radio"]:checked+label{
+    font-weight: bold;
+    background-color: yellow;
+}
+label {
+    font-size: 1.5em;
+    margin-right: 1.2em;
+}

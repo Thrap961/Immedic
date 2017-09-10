@@ -1,5 +1,146 @@
-<ul ng-repeat="item in data">
-    <p>Key: {{item.key}}</p>
-    <br>
-    <p>Value: {{item.value}}</p>
-</ul>
+<div>
+<form>
+<h1 class="ui header">Patient Care Report</h1>
+
+<h2 class="ui top attached header">Demographics</h2>
+
+<div class="ui attached segment three column grid">
+	<div class="column">
+		<fieldset>
+			<span class="obs">Name:</span>
+			<input type="text" ng-value="name[0].value">
+		</fieldset>
+	</div>
+
+	<div class="column">
+		<fieldset>
+			<span class="obs">Age:</span>
+			<input type="text" ng-value="age[0].value">
+		</fieldset>
+	</div>
+
+	<div class="column">
+		<fieldset>
+			<span class="obs">Sex:</span>
+			<input type="radio" name="sex" id="sexm" value="male" ng-model="sex">
+			<label for="sexm">Male</label>
+			<input type="radio" name="sex" id="sexf" value="female" ng-model="sex">
+			<label for="sexf">Female</label>
+		</fieldset>
+	</div>
+</div>
+
+<h2 class="ui top attached header">Rapid Assessment</h2>
+
+<div class="ui attached segment two column grid">
+	<div class="column">
+		<fieldset>
+			<span class="obs">CPR:</span>
+			<input type="radio" name="cpr" id="cpr1" value="yes" ng-model="cpr">
+			<label for="cpr1">Yes</label>
+			<input type="radio" name="cpr" id="cpr2" value="no" ng-model="cpr">
+			<label for="cpr2">No</label>
+		</fieldset>
+	</div>
+
+	<div class="column">
+		<fieldset>
+			<span class="obs">Airway:</span>
+			<input type="radio" name="airway" id="air1" value="yes" ng-model="airway">
+			<label for="air1">Yes</label>
+			<input type="radio" name="airway" id="air2" value="no" ng-model="airway">
+			<label for="air2">No</label>
+		</fieldset>
+	</div>
+
+	<div class="column">
+		<fieldset>
+			<span class="obs">LOC:</span>
+			<input type="radio" name="loc" id="loc1" value="alert" ng-model="conscious">
+			<label for="loc1">Alert</label>
+			<input type="radio" name="loc" id="loc2" value="verbal" ng-model="conscious">
+			<label for="loc2">Verbal</label>
+			<input type="radio" name="loc" id="loc3" value="pain" ng-model="conscious">
+			<label for="loc3">Pain</label>
+			<input type="radio" name="loc" id="loc4" value="unresponsive" ng-model="conscious">
+			<label for="loc4">Unresponsive</label>
+		</fieldset>
+	</div>
+
+	<div class="column">
+		<fieldset>
+			<span class="obs">Stroke scale:</span>
+			<input type="radio" name="stroke" id="stroke1" value="no" ng-model="strok">
+			<label for="stroke1">N/A</label>
+			<input type="radio" name="stroke" id="stroke2" value="facial drop" ng-model="strok">
+			<label for="stroke2">Facial drop</label>
+			<input type="radio" name="stroke" id="stroke3" value="arm drift" ng-model="strok">
+			<label for="stroke3">Arm drift</label>
+			<input type="radio" name="stroke" id="stroke4" value="speech impaired" ng-model="strok">
+			<label for="stroke4">Speech impaired</label>
+		</fieldset>
+	</div>
+	
+	<div class="column">
+		<fieldset>
+			<span class="obs">Pupils:</span>
+			<input type="radio" name="pupils" id="pupils1" value="normal" ng-model="pup">
+			<label for="pupils1">Normal</label>
+			<input type="radio" name="pupils" id="pupils2" value="constricted" ng-model="pup">
+			<label for="pupils2">Constricted</label>
+			<input type="radio" name="pupils" id="pupils3" value="dilated" ng-model="pup">
+			<label for="pupils3">Dilated</label>
+			<input type="radio" name="pupils" id="pupils4" value="no reaction" ng-model="pup">
+			<label for="pupils4">No reaction</label>
+		</fieldset>
+	</div>
+
+	<div class="column">
+			<fieldset>
+				<span class="obs">Injury:</span>
+				<input type="radio" name="injury" id="inj1" value="no" ng-model="injury">
+				<label for="inj1">None</label>
+				<input type="radio" name="injury" id="inj2" value="blunt" ng-model="injury">
+				<label for="inj2">Blunt</label>
+				<input type="radio" name="injury" id="inj3" value="penetrating" ng-model="injury">
+				<label for="inj3">Penetrating</label>
+				<input type="radio" name="injury" id="inj4" value="burn" ng-model="injury">
+				<label for="inj4">Burn</label>
+			</fieldset>
+	</div>
+
+</div>
+
+<div class="ui one column grid container">
+	<div class="column">
+		<table id="vitals">
+				<thead>
+					<td width="20%">Date/Time</td>
+					<td width="30%">BP</td>
+					<td width="30%">Pulse</td>
+					<td width="30%">Respiratory Rate</td>
+				</thead>
+				<tr ng-repeat="item in vitals">
+					<td>{{item.date | date:'medium'}}</td>
+					<td>{{item.bps}} / {{item.bpd}}</td>
+					<td>{{item.pr}}</td>
+					<td>{{item.rr}}</td>
+				</tr>
+			</table>
+	</div>
+</div>
+
+
+<div class="ui attached segment one column grid">
+	<div class="column">
+		<fieldset>
+			<span class="obs">Past Medical History:</span>
+			<textarea rows="3"cols="50">{{hist[0].medHist}}</textarea>
+		</fieldset>
+	</div>
+</div>
+
+
+</form>
+
+</div>
