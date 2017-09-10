@@ -42,7 +42,29 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.injuryCheck = function(val) {
         $scope.injury = val;
     }
-
+    function exportData() {
+      var data = '';
+      for (var i=1;i<=3;i++) {
+        var sep = '';
+        for (var j=1;j<=2;j++) {
+            data +=  sep + document.getElementById(i + '_' + j).value;
+            sep = ',';
+        }
+        data += '\r\n';
+    }
+    for (var i=1;i<=4;i++) {
+        var sep = '';
+        for (var j=1;j<=4;j++) {
+            data +=  sep + document.getElementById(i + '_' + j).value;
+            sep = ',';
+        }
+        data += '\r\n';
+    }
+      var exportLink = document.createElement('a');
+      exportLink.setAttribute('href', 'data:text/csv;base64,' + window.btoa(data));
+      exportLink.appendChild(document.createTextNode('test.csv'));
+      document.getElementById('results').appendChild(exportLink);
+}
     var commands = {
         'ssn *val':function(val){
             $scope.ssn.push({
@@ -154,6 +176,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.hist.push({
                 medHist: val
             })
+            $scope.histjoin = $scope.hist.join('\n');  
             $scope.$apply();
         },
         'allergies *val': function(val){
