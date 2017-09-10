@@ -115,16 +115,18 @@
 	<div class="column">
 		<table id="vitals" class="ui celled padded table">
 				<thead>
-					<th width="20%">Date/Time</th>
-					<th width="30%">BP</th>
-					<th width="30%">Pulse</th>
-					<th width="30%">Respiratory Rate</th>
+					<th width="25%">Date/Time</th>
+					<th width="18%">BP</th>
+					<th width="18%">Pulse</th>
+					<th width="18%">Respiratory Rate</th>
+					<th width="18%">Oximetry</th>
 				</thead>
 				<tr ng-repeat="item in vitals">
 					<td>{{item.date | date:'medium'}}</td>
 					<td>{{item.bps}} / {{item.bpd}}</td>
 					<td>{{item.pr}}</td>
 					<td>{{item.rr}}</td>
+					<td>{{item.ox}}</td>
 				</tr>
 			</table>
 	</div>
