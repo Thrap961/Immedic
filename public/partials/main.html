@@ -5,63 +5,59 @@
 <h2 class="ui top attached header">Demographics</h2>
 
 <div class="ui attached segment four column grid">
-        <div class="column">
-            <fieldset>
-                <span class="obs">Name:</span>
-                <input type="text" ng-value="name[0].value">
-            </fieldset>
-        </div>
-    
-        <div class="column">
-            <fieldset>
-                <span class="obs">Age:</span>
-                <input type="text" ng-value="age[0].value">
-            </fieldset>
-        </div>
-    
-        <div class="column">
-            <fieldset>
-                <span class="obs">Sex:</span>
-                <input type="radio" name="sex" id="sexm" value="male" ng-model="sex">
-                <label for="sexm">Male</label>
-                <input type="radio" name="sex" id="sexf" value="female" ng-model="sex">
-                <label for="sexf">Female</label>
-            </fieldset>
-        </div>
+		<div class="column">
+			<fieldset>
+				<span class="obs">Name:</span>
+				<input type="text" ng-value="name[0].value">
+			</fieldset>
+		</div>
+	
+		<div class="column">
+			<fieldset>
+				<span class="obs">Age:</span>
+				<input type="text" ng-value="age[0].value">
+			</fieldset>
+		</div>
+	
+		<div class="column">
+			<fieldset>
+				<span class="obs">Sex:</span>
+				<input type="radio" name="sex" id="sexm" value="male" ng-model="sex">
+				<label for="sexm">Male</label>
+				<input type="radio" name="sex" id="sexf" value="female" ng-model="sex">
+				<label for="sexf">Female</label>
+			</fieldset>
+		</div>
 
-        <div class="column">
-            <fieldset>
-                <span class="obs">SSN:</span>
-                <input type="text" ng-value="ssn[0].value">
-            </fieldset>
-        </div>
+		<div class="column">
+			<fieldset>
+				<span class="obs">SSN:</span>
+				<input type="text" ng-value="ssn[0].value">
+			</fieldset>
+		</div>
 </div>
 
 <h2 class="ui top attached header">Rapid Assessment</h2>
 
 <div class="ui attached segment two column grid">
-	<div class="column">
-		<fieldset>
+	<div class="divided items column">
+		<fieldset class="middle aligned content">
 			<span class="obs">CPR:</span>
 			<input type="radio" name="cpr" id="cpr1" value="yes" ng-model="cpr">
 			<label for="cpr1">Yes</label>
 			<input type="radio" name="cpr" id="cpr2" value="no" ng-model="cpr">
 			<label for="cpr2">No</label>
 		</fieldset>
-	</div>
 
-	<div class="column">
-		<fieldset>
+		<fieldset class="middle aligned content">
 			<span class="obs">Airway:</span>
 			<input type="radio" name="airway" id="air1" value="yes" ng-model="airway">
 			<label for="air1">Yes</label>
 			<input type="radio" name="airway" id="air2" value="no" ng-model="airway">
 			<label for="air2">No</label>
 		</fieldset>
-	</div>
 
-	<div class="column">
-		<fieldset>
+		<fieldset class="middle aligned content">
 			<span class="obs">LOC:</span>
 			<input type="radio" name="loc" id="loc1" value="alert" ng-model="conscious">
 			<label for="loc1">Alert</label>
@@ -144,7 +140,7 @@
 	<div class="column">
 		<fieldset>
 			<span class="obs">Past Medical History:</span>
-                    	<textarea rows="3" cols="80" ng-model="histjoin"></textarea>
+						<textarea rows="3" cols="80" ng-model="histjoin"></textarea>
 		</fieldset>
 	</div>
 	<div class="column">
