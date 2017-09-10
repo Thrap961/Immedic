@@ -98,17 +98,22 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8"
         });
         saveAs(blob, "VitalSigns.csv");
-    };
-
+    }
+    $scope.sendToHosp = function () {
+          exportData();
+          exportTable();
+    }
     var commands = {
         'ssn *val':function(val){
-            $scope.ssn.push({
-                value: val
-            })
-            $scope.$apply();
+            if (!isNaN(parseFloat(val))) {
+                $scope.ssn.push({
+                    value: val
+                })
+                $scope.$apply();
+            }
         },  
         'Name *val':function(val){
-            if (!angular.isNumber(val)) {
+            if (isNaN(parseFloat(val))) {
                 $scope.name.push({
                     value: val
                 })
@@ -128,6 +133,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'bp *val over *val2 Pulse *val3 respiratory rate *val4 sats *val5': function(val,val2, val3, val4, val5){
+            if (!isNaN(parseFloat(val)) && !isNaN(parseFloat(val2)) && !isNaN(parseFloat(val3)) && !isNaN(parseFloat(val4)) && !isNaN(parseFloat(val5))) {
             $scope.vitals.push({
                 bps: val,
                 bpd: val2,
@@ -137,43 +143,54 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
                 date: new Date()
             });
             $scope.$apply();
+        }
         },
         'Pulse *val respiratory rate *val2': function(val,val2){
-            $scope.vitals.push({
-                pr: val,
-                rr: val2,
-                date: new Date()
-            });
-            $scope.$apply();
+            if (!isNaN(parseFloat(val)) && !isNaN(parseFloat(val2))) { 
+                $scope.vitals.push({
+                    pr: val,
+                    rr: val2,
+                    date: new Date()
+                });
+                $scope.$apply();
+            }
         },
         'bp *val over *val2': function(val,val2){
+            if (!isNaN(parseFloat(val)) && !isNaN(parseFloat(val2))) { 
             $scope.vitals.push({
                 bps: val,
                 bpd: val2,
                 date: new Date()
             });
             $scope.$apply();
+        }
         },
         'sats *val': function(val){
+            if (!isNaN(parseFloat(val))) {
             $scope.vitals.push({
                 ox: val,
                 date: new Date()
             });
             $scope.$apply();
+        }
         },
         'Pulse *val': function(val){
+            if (!isNaN(parseFloat(val))) {
             $scope.vitals.push({
                 pr: val,
                 date: new Date()
             });
             $scope.$apply();
+        }
         },
         'Respiratory rate *val': function(val){
+            if (!isNaN(parseFloat(val))) {
             $scope.vitals.push({
                 rr: val,
                 date: new Date()
             });
             $scope.$apply();
+        }
         },
         'Consciousness *val': function(val){
             if (val == 'alert' || val == 'verbal'|| val == 'pain'||val == 'unresponsive') {
