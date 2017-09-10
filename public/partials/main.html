@@ -40,72 +40,76 @@
 <h2 class="ui top attached header">Rapid Assessment</h2>
 
 <div class="ui attached segment two column grid">
-	<div class="ui divided items column">
-		<fieldset class="item">
-			<span class="obs">CPR:</span>
-			<input type="radio" name="cpr" id="cpr1" value="yes" ng-model="cpr">
-			<label for="cpr1">Yes</label>
-			<input type="radio" name="cpr" id="cpr2" value="no" ng-model="cpr">
-			<label for="cpr2">No</label>
-		</fieldset>
+	<div class="column">
+		<div class="ui divided items">
+			<fieldset class="item">
+				<span class="obs">CPR:</span>
+				<input type="radio" name="cpr" id="cpr1" value="yes" ng-model="cpr">
+				<label for="cpr1">Yes</label>
+				<input type="radio" name="cpr" id="cpr2" value="no" ng-model="cpr">
+				<label for="cpr2">No</label>
+			</fieldset>
 
-		<fieldset class="item">
-			<span class="obs">Airway:</span>
-			<input type="radio" name="airway" id="air1" value="yes" ng-model="airway">
-			<label for="air1">Yes</label>
-			<input type="radio" name="airway" id="air2" value="no" ng-model="airway">
-			<label for="air2">No</label>
-		</fieldset>
+			<fieldset class="item">
+				<span class="obs">Airway:</span>
+				<input type="radio" name="airway" id="air1" value="yes" ng-model="airway">
+				<label for="air1">Yes</label>
+				<input type="radio" name="airway" id="air2" value="no" ng-model="airway">
+				<label for="air2">No</label>
+			</fieldset>
 
-		<fieldset class="item">
-			<span class="obs">LOC:</span>
-			<input type="radio" name="loc" id="loc1" value="alert" ng-model="conscious">
-			<label for="loc1">Alert</label>
-			<input type="radio" name="loc" id="loc2" value="verbal" ng-model="conscious">
-			<label for="loc2">Verbal</label>
-			<input type="radio" name="loc" id="loc3" value="pain" ng-model="conscious">
-			<label for="loc3">Pain</label>
-			<input type="radio" name="loc" id="loc4" value="unresponsive" ng-model="conscious">
-			<label for="loc4">Unresponsive</label>
-		</fieldset>
+			<fieldset class="item">
+				<span class="obs">LOC:</span>
+				<input type="radio" name="loc" id="loc1" value="alert" ng-model="conscious">
+				<label for="loc1">Alert</label>
+				<input type="radio" name="loc" id="loc2" value="verbal" ng-model="conscious">
+				<label for="loc2">Verbal</label>
+				<input type="radio" name="loc" id="loc3" value="pain" ng-model="conscious">
+				<label for="loc3">Pain</label>
+				<input type="radio" name="loc" id="loc4" value="unresponsive" ng-model="conscious">
+				<label for="loc4">Unresponsive</label>
+			</fieldset>
+		</div>
 	</div>
 
-	<div class="ui divided items column">
-		<fieldset class="item">
-			<span class="obs">Stroke scale:</span>
-			<input type="radio" name="stroke" id="stroke1" value="no" ng-model="strok">
-			<label for="stroke1">N/A</label>
-			<input type="radio" name="stroke" id="stroke2" value="facial drop" ng-model="strok">
-			<label for="stroke2">Facial drop</label>
-			<input type="radio" name="stroke" id="stroke3" value="arm drift" ng-model="strok">
-			<label for="stroke3">Arm drift</label>
-			<input type="radio" name="stroke" id="stroke4" value="speech impaired" ng-model="strok">
-			<label for="stroke4">Speech impaired</label>
-		</fieldset>
+	<div class="column">
+		<div class="ui divided items">
+			<fieldset class="item">
+				<span class="obs">Stroke scale:</span>
+				<input type="radio" name="stroke" id="stroke1" value="no" ng-model="strok">
+				<label for="stroke1">N/A</label>
+				<input type="radio" name="stroke" id="stroke2" value="facial drop" ng-model="strok">
+				<label for="stroke2">Facial drop</label>
+				<input type="radio" name="stroke" id="stroke3" value="arm drift" ng-model="strok">
+				<label for="stroke3">Arm drift</label>
+				<input type="radio" name="stroke" id="stroke4" value="speech impaired" ng-model="strok">
+				<label for="stroke4">Speech impaired</label>
+			</fieldset>
 
-		<fieldset class="item">
-			<span class="obs">Pupils:</span>
-			<input type="radio" name="pupils" id="pupils1" value="normal" ng-model="pup">
-			<label for="pupils1">Normal</label>
-			<input type="radio" name="pupils" id="pupils2" value="constricted" ng-model="pup">
-			<label for="pupils2">Constricted</label>
-			<input type="radio" name="pupils" id="pupils3" value="dilated" ng-model="pup">
-			<label for="pupils3">Dilated</label>
-			<input type="radio" name="pupils" id="pupils4" value="no reaction" ng-model="pup">
-			<label for="pupils4">No reaction</label>
-		</fieldset>
+			<fieldset class="item">
+				<span class="obs">Pupils:</span>
+				<input type="radio" name="pupils" id="pupils1" value="normal" ng-model="pup">
+				<label for="pupils1">Normal</label>
+				<input type="radio" name="pupils" id="pupils2" value="constricted" ng-model="pup">
+				<label for="pupils2">Constricted</label>
+				<input type="radio" name="pupils" id="pupils3" value="dilated" ng-model="pup">
+				<label for="pupils3">Dilated</label>
+				<input type="radio" name="pupils" id="pupils4" value="no reaction" ng-model="pup">
+				<label for="pupils4">No reaction</label>
+			</fieldset>
 
-		<fieldset class="item">
-			<span class="obs">Injury:</span>
-			<input type="radio" name="injury" id="inj1" value="no" ng-model="injury">
-			<label for="inj1">None</label>
-			<input type="radio" name="injury" id="inj2" value="blunt" ng-model="injury">
-			<label for="inj2">Blunt</label>
-			<input type="radio" name="injury" id="inj3" value="penetrating" ng-model="injury">
-			<label for="inj3">Penetrating</label>
-			<input type="radio" name="injury" id="inj4" value="burn" ng-model="injury">
-			<label for="inj4">Burn</label>
-		</fieldset>
+			<fieldset class="item">
+				<span class="obs">Injury:</span>
+				<input type="radio" name="injury" id="inj1" value="no" ng-model="injury">
+				<label for="inj1">None</label>
+				<input type="radio" name="injury" id="inj2" value="blunt" ng-model="injury">
+				<label for="inj2">Blunt</label>
+				<input type="radio" name="injury" id="inj3" value="penetrating" ng-model="injury">
+				<label for="inj3">Penetrating</label>
+				<input type="radio" name="injury" id="inj4" value="burn" ng-model="injury">
+				<label for="inj4">Burn</label>
+			</fieldset>
+		</div>
 	</div>
 
 </div>
