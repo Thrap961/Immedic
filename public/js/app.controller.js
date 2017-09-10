@@ -116,7 +116,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
         },
         'Age *val':function(val){
-            if (angular.isNumber(val)) {
+            if (!isNaN(parseFloat(obj))) {
                 $scope.age.push({
                     value: val
                 })
