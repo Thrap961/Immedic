@@ -108,7 +108,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },  
         'Name *val':function(val){
-            if (!isNumber(val)) {
+            if (!angular.isNumber(val)) {
                 $scope.name.push({
                     value: val
                 })
@@ -116,7 +116,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
         },
         'Age *val':function(val){
-            if (isNumber(val)) {
+            if (angular.isNumber(val)) {
                 $scope.age.push({
                     value: val
                 })
