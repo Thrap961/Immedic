@@ -99,7 +99,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         });
         saveAs(blob, "VitalSigns.csv");
     };
-    
+
     var commands = {
         'ssn *val':function(val){
             $scope.ssn.push({
@@ -108,16 +108,20 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },  
         'Name *val':function(val){
-            $scope.name.push({
-                value: val
-            })
-            $scope.$apply();
+            if (!isNumber(val)) {
+                $scope.name.push({
+                    value: val
+                })
+                $scope.$apply();
+            }
         },
         'Age *val':function(val){
-            $scope.age.push({
-                value: val
-            })
-            $scope.$apply();
+            if (isNumber(val)) {
+                $scope.age.push({
+                    value: val
+                })
+                $scope.$apply();
+            }
         },
         'Sex *val':function(val){
             $scope.sex(val);
