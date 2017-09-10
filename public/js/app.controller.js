@@ -15,9 +15,9 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.name = localStorage.getItem('name')||[];
     $scope.age = localStorage.getItem('age')||[];
     $scope.hist = localStorage.getItem('hist')||[];
-    $scope.hist = localStorage.getItem('allergy')||[];
-    $scope.hist = localStorage.getItem('med')||[];
-    $scope.hist = localStorage.getItem('treat')||[];
+    $scope.allergy = localStorage.getItem('allergy')||[];
+    $scope.med = localStorage.getItem('med')||[];
+    $scope.treat = localStorage.getItem('treat')||[];
     
     $scope.sex = function(val) {
         $scope.sex = val;
