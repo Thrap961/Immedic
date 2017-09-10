@@ -58,6 +58,24 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.sex(val);
             $scope.$apply();
         },
+        'Blood pressure *val over *val2 Pulse *val3 respiratory rate *val4': function(val,val2, val3, val4){
+            $scope.vitals.push({
+                bps: val,
+                bpd: val2,
+                pr: val3,
+                rr: val4,
+                date: new Date()
+            });
+            $scope.$apply();
+        },
+        'Pulse *val respiratory rate *val2': function(val,val2){
+            $scope.vitals.push({
+                pr: val,
+                rr: val2,
+                date: new Date()
+            });
+            $scope.$apply();
+        },
         'Blood pressure *val over *val2': function(val,val2){
             $scope.vitals.push({
                 bps: val,
@@ -83,24 +101,6 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         'Respiratory rate *val': function(val){
             $scope.vitals.push({
                 rr: val,
-                date: new Date()
-            });
-            $scope.$apply();
-        },
-        'Pulse *val respiratory rate *val2': function(val,val2){
-            $scope.vitals.push({
-                pr: val,
-                rr: val2,
-                date: new Date()
-            });
-            $scope.$apply();
-        },
-        'Blood pressure *val over *val2 Pulse *val3 respiratory rate *val4': function(val,val2, val3, val4){
-            $scope.vitals.push({
-                bps: val,
-                bpd: val2,
-                pr: val3,
-                rr: val4,
                 date: new Date()
             });
             $scope.$apply();
