@@ -4,11 +4,13 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
       
     $scope.line = 'what.....';
     $window.localStorage.setItem('vitals',[]);
-    $window.localStorage.setItem('demo',[]);
+    $window.localStorage.setItem('name',[]);
+    $window.localStorage.setItem('age',[]);
     $window.localStorage.setItem('hist',[]);
 
     $scope.vitals = localStorage.getItem('vitals')||[];
-    $scope.demo = localStorage.getItem('demo')||[];
+    $scope.name = localStorage.getItem('name')||[];
+    $scope.age = localStorage.getItem('age')||[];
     $scope.hist = localStorage.getItem('hist')||[];
     
     $scope.sex = function(val) {
@@ -35,14 +37,14 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
 
     var commands = {
         'Name *val':function(val){
-            $scope.demo.push({
-                name: val
+            $scope.name.push({
+                value: val
             })
             $scope.$apply();
         },
         'Age *val':function(val){
-            $scope.demo.push({
-                age: val
+            $scope.age.push({
+                value: val
             })
             $scope.$apply();
         },
@@ -114,8 +116,10 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'stroke *val': function(val){
-            $scope.strokeCheck(val);
-            $scope.$apply();
+            if (val == 'facial drop') {
+                $scope.strokeCheck(val);
+                $scope.$apply();
+            }
         },
         '*val injury': function(val){
             $scope.injuryCheck(val);
