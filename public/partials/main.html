@@ -70,8 +70,8 @@
 		</fieldset>
 	</div>
 
-	<div class="column">
-		<fieldset>
+	<div class="ui divided items column">
+		<fieldset class="item">
 			<span class="obs">Stroke scale:</span>
 			<input type="radio" name="stroke" id="stroke1" value="no" ng-model="strok">
 			<label for="stroke1">N/A</label>
@@ -82,10 +82,8 @@
 			<input type="radio" name="stroke" id="stroke4" value="speech impaired" ng-model="strok">
 			<label for="stroke4">Speech impaired</label>
 		</fieldset>
-	</div>
-	
-	<div class="column">
-		<fieldset>
+
+		<fieldset class="item">
 			<span class="obs">Pupils:</span>
 			<input type="radio" name="pupils" id="pupils1" value="normal" ng-model="pup">
 			<label for="pupils1">Normal</label>
@@ -96,20 +94,18 @@
 			<input type="radio" name="pupils" id="pupils4" value="no reaction" ng-model="pup">
 			<label for="pupils4">No reaction</label>
 		</fieldset>
-	</div>
 
-	<div class="column">
-			<fieldset>
-				<span class="obs">Injury:</span>
-				<input type="radio" name="injury" id="inj1" value="no" ng-model="injury">
-				<label for="inj1">None</label>
-				<input type="radio" name="injury" id="inj2" value="blunt" ng-model="injury">
-				<label for="inj2">Blunt</label>
-				<input type="radio" name="injury" id="inj3" value="penetrating" ng-model="injury">
-				<label for="inj3">Penetrating</label>
-				<input type="radio" name="injury" id="inj4" value="burn" ng-model="injury">
-				<label for="inj4">Burn</label>
-			</fieldset>
+		<fieldset class="item">
+			<span class="obs">Injury:</span>
+			<input type="radio" name="injury" id="inj1" value="no" ng-model="injury">
+			<label for="inj1">None</label>
+			<input type="radio" name="injury" id="inj2" value="blunt" ng-model="injury">
+			<label for="inj2">Blunt</label>
+			<input type="radio" name="injury" id="inj3" value="penetrating" ng-model="injury">
+			<label for="inj3">Penetrating</label>
+			<input type="radio" name="injury" id="inj4" value="burn" ng-model="injury">
+			<label for="inj4">Burn</label>
+		</fieldset>
 	</div>
 
 </div>
