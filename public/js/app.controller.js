@@ -141,7 +141,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
                 $scope.$apply();
             }
         },
-        'medical history *val' : function(val){
+        'past medical history *val' : function(val){
             $scope.hist.push({
                 medHist: val
             })
