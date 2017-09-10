@@ -272,6 +272,9 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
             $scope.$apply();
         },
+        'send to hospital':function() {
+            $scope.sendToHosp();
+        }
     };
 
     annyang.addCommands(commands);
