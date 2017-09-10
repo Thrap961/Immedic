@@ -84,15 +84,22 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
             data += '\r\n';
         }
-        data +=  sep + document.getElementById('vitals');
-        sep = ',';
-        data += '\r\n';
+        //data +=  sep + document.getElementById('vitals');
+        //sep = ',';
+        //data += '\r\n';
         var exportLink = document.createElement('a');
         exportLink.setAttribute('href', 'data:text/csv;base64,' + window.btoa(data));
         exportLink.appendChild(document.createTextNode('test.csv'));
         document.getElementById('results').appendChild(exportLink);
         document.getElementById('results').setAttribute("style", "visibility: visible;");
     }
+    $scope.exportData1 = function () {
+        var blob = new Blob([document.getElementById('vitals').innerHTML], {
+            type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8"
+        });
+        saveAs(blob, "VitalSigns.csv");
+    };
+    
     var commands = {
         'ssn *val':function(val){
             $scope.ssn.push({
