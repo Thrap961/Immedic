@@ -217,7 +217,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
         },
         'stroke *val': function(val){
-            if (val == 'no' || val == 'facial drop'|| val == 'arm drift'||val == 'speech impaired') {
+            if (val == 'no' || val == 'facial droop'|| val == 'arm drift'||val == 'speech impaired') {
                 $scope.strokeCheck(val);
                 $scope.$apply();
             }
