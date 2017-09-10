@@ -93,7 +93,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         document.getElementById('results').appendChild(exportLink);
         document.getElementById('results').setAttribute("style", "visibility: visible;");
     }
-    $scope.exportData1 = function () {
+    $scope.exportTable = function () {
         var blob = new Blob([document.getElementById('vitals').innerHTML], {
             type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8"
         });
