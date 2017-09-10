@@ -58,12 +58,13 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.sex(val);
             $scope.$apply();
         },
-        'Blood pressure *val over *val2 Pulse *val3 respiratory rate *val4': function(val,val2, val3, val4){
+        'Blood pressure *val over *val2 Pulse *val3 respiratory rate *val4 oximetry *val5': function(val,val2, val3, val4, val5){
             $scope.vitals.push({
                 bps: val,
                 bpd: val2,
                 pr: val3,
                 rr: val4,
+                ox: val5,
                 date: new Date()
             });
             $scope.$apply();
