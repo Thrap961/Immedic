@@ -26,6 +26,6 @@ label {
     font-size: 1.5em;
     margin-right: 1.2em;
 }
-.column {
+div.column {
     border: none;
 }
