@@ -30,9 +30,9 @@ div.column {
     border: none;
 }
 #results {
-    visibility: hidden;
+    display: none;
 }
-th, td {
+th {
     font-size: 1.5em;
 }
 input, textarea {
