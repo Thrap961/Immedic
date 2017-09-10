@@ -176,7 +176,11 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.hist.push({  
                 medHist: val
             })
-            $scope.histjoin = $scope.histjoin + ", " + val;  
+            if ($scope.histjoin == "") {
+                  $scope.histjoin = val;
+            } else {
+                  $scope.histjoin = $scope.histjoin + ", " + val;  
+            }
             $scope.$apply();
         },
         'allergies *val': function(val){
