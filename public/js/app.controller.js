@@ -21,6 +21,10 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.treat = localStorage.getItem('treat')||[];
     $scope.ssn = localStorage.getItem('ssn')||[];
     $scope.histjoin = "";
+    $scope.allergyjoin = "";
+    $scope.medjoin = "";
+    $scope.treatjoin = "";  
+      
     $scope.sex = function(val) {
         $scope.sex = val;
     }
@@ -187,18 +191,33 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.allergy.push({
                 allergies: val
             })
+            if ($scope.allergyjoin == "") {
+                  $scope.allergyjoin = val;
+            } else {
+                  $scope.allergyjoin = $scope.allergyjoin + ", " + val;  
+            }
             $scope.$apply();
         },
         'meds *val': function(val){
             $scope.med.push({
                 medication: val
             })
+            if ($scope.medjoin == "") {
+                  $scope.medjoin = val;
+            } else {
+                  $scope.medjoin = $scope.medjoin + ", " + val;  
+            }
             $scope.$apply();
         },
         'treatment *val': function(val){
             $scope.treat.push({
                 treatment: val
             })
+            if ($scope.treatjoin == "") {
+                  $scope.treatjoin = val;
+            } else {
+                  $scope.treatjoin = $scope.treatjoin + ", " + val;  
+            }
             $scope.$apply();
         },
     };
