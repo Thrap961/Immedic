@@ -15,7 +15,7 @@
 	<div class="column">
 		<fieldset>
 			<span class="obs">Age:</span>
-			<input type="text" ng-value="age">
+			<input type="text" ng-value="age[0].value">
 		</fieldset>
 	</div>
 
@@ -129,6 +129,17 @@
 			</table>
 	</div>
 </div>
+
+
+<div class="ui attached segment one column grid">
+	<div class="column">
+		<fieldset>
+			<span class="obs">Past Medical History:</span>
+			<textarea rows="3"cols="50">{{hist[0].medHist}}</textarea>
+		</fieldset>
+	</div>
+</div>
+
 
 </form>
 
