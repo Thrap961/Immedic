@@ -94,7 +94,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         document.getElementById('results').setAttribute("style", "visibility: visible;");
     }
     $scope.exportTable = function () {
-        var blob = new Blob([document.getElementById('vitals').innerHTML], {
+        var blob = new Blob([document.getElementById('vitals').textContent], {
             type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8"
         });
         saveAs(blob, "VitalSigns.csv");
