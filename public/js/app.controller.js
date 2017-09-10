@@ -148,7 +148,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.$apply();
         },
         'allergies *val': function(val){
-            $scope.allery.push({
+            $scope.allergy.push({
                 allergies: val
             })
             $scope.$apply();
