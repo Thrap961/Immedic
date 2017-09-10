@@ -84,7 +84,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
             data += '\r\n';
         }
-        data +=  sep + document.getElementById('vitals').value;
+        data +=  sep + document.getElementById('$index').value;
         sep = ',';
         data += '\r\n';
         var exportLink = document.createElement('a');
