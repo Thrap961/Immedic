@@ -176,7 +176,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             $scope.hist.push({
                 medHist: val
             })
-            $scope.histjoin = $scope.hist.join('\n');  
+            $scope.histjoin = $scope.hist.join(', ');  
             $scope.$apply();
         },
         'allergies *val': function(val){
