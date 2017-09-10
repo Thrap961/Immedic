@@ -4,30 +4,37 @@
 
 <h2 class="ui top attached header">Demographics</h2>
 
-<div class="ui attached segment three column grid">
-	<div class="column">
-		<fieldset>
-			<span class="obs">Name:</span>
-			<input type="text" ng-value="name[0].value">
-		</fieldset>
-	</div>
+<div class="ui attached segment four column grid">
+        <div class="column">
+            <fieldset>
+                <span class="obs">Name:</span>
+                <input type="text" ng-value="name[0].value">
+            </fieldset>
+        </div>
+    
+        <div class="column">
+            <fieldset>
+                <span class="obs">Age:</span>
+                <input type="text" ng-value="age[0].value">
+            </fieldset>
+        </div>
+    
+        <div class="column">
+            <fieldset>
+                <span class="obs">Sex:</span>
+                <input type="radio" name="sex" id="sexm" value="male" ng-model="sex">
+                <label for="sexm">Male</label>
+                <input type="radio" name="sex" id="sexf" value="female" ng-model="sex">
+                <label for="sexf">Female</label>
+            </fieldset>
+        </div>
 
-	<div class="column">
-		<fieldset>
-			<span class="obs">Age:</span>
-			<input type="text" ng-value="age[0].value">
-		</fieldset>
-	</div>
-
-	<div class="column">
-		<fieldset>
-			<span class="obs">Sex:</span>
-			<input type="radio" name="sex" id="sexm" value="male" ng-model="sex">
-			<label for="sexm">Male</label>
-			<input type="radio" name="sex" id="sexf" value="female" ng-model="sex">
-			<label for="sexf">Female</label>
-		</fieldset>
-	</div>
+        <div class="column">
+            <fieldset>
+                <span class="obs">SSN:</span>
+                <input type="text" ng-value="ssn[0].value">
+            </fieldset>
+        </div>
 </div>
 
 <h2 class="ui top attached header">Rapid Assessment</h2>
