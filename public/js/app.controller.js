@@ -91,7 +91,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         exportLink.setAttribute('href', 'data:text/csv;base64,' + window.btoa(data));
         exportLink.appendChild(document.createTextNode('test.csv'));
         document.getElementById('results').appendChild(exportLink);
-        document.getElementById('results').setAttribute("style", "visibility: visible;");
+        document.getElementById('results').setAttribute("style", "display: block;");
     }
     $scope.exportTable = function () {
         var blob = new Blob([document.getElementById('vitals').textContent], {
