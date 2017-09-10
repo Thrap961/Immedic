@@ -32,6 +32,6 @@ div.column {
 #results {
     visibility: hidden;
 }
-th {
+input, th {
     font-size: 1.5em;
 }
