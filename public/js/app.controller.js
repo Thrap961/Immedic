@@ -223,7 +223,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
         },
         '*val injury': function(val){
-            if (val == 'none' || val == 'blunt'|| val == 'penetrating'||val == 'burn') {
+            if (val == 'no' || val == 'blunt'|| val == 'penetrating'||val == 'burn') {
                 $scope.injuryCheck(val);
                 $scope.$apply();
             }
