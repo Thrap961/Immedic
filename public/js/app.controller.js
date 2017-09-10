@@ -100,8 +100,8 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
         saveAs(blob, "VitalSigns.csv");
     }
     $scope.sendToHosp = function () {
-          exportData();
-          exportTable();
+          $scope.exportData();
+          $scope.exportTable();
     }
     var commands = {
         'ssn *val':function(val){
