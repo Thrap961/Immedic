@@ -20,7 +20,7 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     $scope.med = localStorage.getItem('med')||[];
     $scope.treat = localStorage.getItem('treat')||[];
     $scope.ssn = localStorage.getItem('ssn')||[];
-    
+    $scope.histjoin = "";
     $scope.sex = function(val) {
         $scope.sex = val;
     }
@@ -173,10 +173,10 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
             }
         },
         'past medical history *val' : function(val){
-            $scope.hist.push({
+            $scope.hist.push({  
                 medHist: val
             })
-            $scope.histjoin = $scope.hist.join(', ');  
+            $scope.histjoin = $scope.histjoin + ", " + val;  
             $scope.$apply();
         },
         'allergies *val': function(val){
