@@ -48,17 +48,33 @@ controllers.controller("MainController",['$scope','$window',function($scope,$win
     }
     function exportData() {
       var data = '';
-      for (var i=1;i<=3;i++) {
-        var sep = '';
+        for (var i=1;i<=3;i++) {
+          var sep = '';
+          for (var j=1;j<=1;j++) {
+            data +=  sep + document.getElementById(i + '_' + j).value;
+            sep = ',';
+        }
+        data += '\r\n';
+    }
+    for (var i=4;i<=6;i++) {
+      var sep = '';
         for (var j=1;j<=2;j++) {
             data +=  sep + document.getElementById(i + '_' + j).value;
             sep = ',';
         }
         data += '\r\n';
     }
-    for (var i=1;i<=4;i++) {
+    for (var i=7;i<=10;i++) {
         var sep = '';
         for (var j=1;j<=4;j++) {
+            data +=  sep + document.getElementById(i + '_' + j).value;
+            sep = ',';
+        }
+        data += '\r\n';
+    }
+    for (var i=11;i<=14;i++) {
+      var sep = '';
+        for (var j=1;j<=1;j++) {
             data +=  sep + document.getElementById(i + '_' + j).value;
             sep = ',';
         }
