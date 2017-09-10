@@ -26,6 +26,6 @@ label {
     font-size: 1.5em;
     margin-right: 1.2em;
 }
-td.warning {
-    background-color: #fff6f6;   
+.column {
+    border: none;
 }
