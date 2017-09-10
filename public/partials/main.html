@@ -122,6 +122,7 @@
 					<th width="18%">Oximetry</th>
 				</thead>
 				<tr ng-repeat="item in vitals">
+					<td>{{item.date | date:'medium'}}</td>
 					<td>{{!item.bps ? "" : (item.bps + " / " + item.bpd)}}</td>
 					<td ng-class="{'error': (item.pr-0) > 100, 'warning': (item.pr-0) < 50}"><i ng-class="{'attention icon': (item.pr-0) > 100"></i>{{item.pr}}</td>
 					<td ng-class="{'error': (item.rr-0) > 20, 'warning': (item.rr-0) < 12}">{{item.rr}}</td>
