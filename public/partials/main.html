@@ -1,6 +1,15 @@
 <div>
 <form>
-<h1 class="ui header">Patient Care Report</h1>
+
+<div class="ui attached segment two column grid">
+		<div class="column">
+			<h1 class="ui header">Patient Care Report</h1>
+		</div>
+		<div class="column">
+			<button ng-click="exportData()"></button>
+		</div>
+</div>
+
 
 <h2 class="ui top attached header">Demographics</h2>
 
@@ -8,31 +17,31 @@
 		<div class="column">
 			<fieldset class="item">
 				<span class="obs">Name:</span>
-				<input type="text" ng-value="name[0].value">
+				<input type="text" id="1_1" ng-value="name[0].value">
 			</fieldset>
 		</div>
 	
 		<div class="column">
 			<fieldset class="item">
 				<span class="obs">Age:</span>
-				<input type="text" ng-value="age[0].value">
+				<input type="text" id="2_1" ng-value="age[0].value">
 			</fieldset>
 		</div>
 	
 		<div class="column">
 			<fieldset class="item">
 				<span class="obs">Sex:</span>
-				<input type="radio" name="sex" id="sexm" value="male" ng-model="sex">
-				<label for="sexm">Male</label>
-				<input type="radio" name="sex" id="sexf" value="female" ng-model="sex">
-				<label for="sexf">Female</label>
+				<input type="radio" name="sex" id="4_1" value="male" ng-model="sex">
+				<label for="4_1">Male</label>
+				<input type="radio" name="sex" id="4_2" value="female" ng-model="sex">
+				<label for="4_2">Female</label>
 			</fieldset>
 		</div>
 
 		<div class="column">
 			<fieldset class="item">
 				<span class="obs">SSN:</span>
-				<input type="text" ng-value="ssn[0].value">
+				<input type="text" id="3_1" ng-value="ssn[0].value">
 			</fieldset>
 		</div>
 </div>
@@ -44,30 +53,30 @@
 		<div class="ui divided items">
 			<fieldset class="item">
 				<span class="obs">CPR:</span>
-				<input type="radio" name="cpr" id="cpr1" value="yes" ng-model="cpr">
-				<label for="cpr1">Yes</label>
-				<input type="radio" name="cpr" id="cpr2" value="no" ng-model="cpr">
-				<label for="cpr2">No</label>
+				<input type="radio" name="cpr" id="5_1" value="yes" ng-model="cpr">
+				<label for="5_1">Yes</label>
+				<input type="radio" name="cpr" id="5_2" value="no" ng-model="cpr">
+				<label for="5_2">No</label>
 			</fieldset>
 
 			<fieldset class="item">
 				<span class="obs">Airway:</span>
-				<input type="radio" name="airway" id="air1" value="yes" ng-model="airway">
-				<label for="air1">Yes</label>
-				<input type="radio" name="airway" id="air2" value="no" ng-model="airway">
-				<label for="air2">No</label>
+				<input type="radio" name="airway" id="6_1" value="yes" ng-model="airway">
+				<label for="6_1">Yes</label>
+				<input type="radio" name="airway" id="6_2" value="no" ng-model="airway">
+				<label for="6_2">No</label>
 			</fieldset>
 
 			<fieldset class="item">
 				<span class="obs">LOC:</span>
-				<input type="radio" name="loc" id="loc1" value="alert" ng-model="conscious">
-				<label for="loc1">Alert</label>
-				<input type="radio" name="loc" id="loc2" value="verbal" ng-model="conscious">
-				<label for="loc2">Verbal</label>
-				<input type="radio" name="loc" id="loc3" value="pain" ng-model="conscious">
-				<label for="loc3">Pain</label>
-				<input type="radio" name="loc" id="loc4" value="unresponsive" ng-model="conscious">
-				<label for="loc4">Unresponsive</label>
+				<input type="radio" name="loc" id="7_1" value="alert" ng-model="conscious">
+				<label for="7_1">Alert</label>
+				<input type="radio" name="loc" id="7_2" value="verbal" ng-model="conscious">
+				<label for="7_2">Verbal</label>
+				<input type="radio" name="loc" id="7_3" value="pain" ng-model="conscious">
+				<label for="7_3">Pain</label>
+				<input type="radio" name="loc" id="7_4" value="unresponsive" ng-model="conscious">
+				<label for="7_4">Unresponsive</label>
 			</fieldset>
 		</div>
 	</div>
@@ -76,38 +85,38 @@
 		<div class="ui divided items">
 			<fieldset class="item">
 				<span class="obs">Stroke scale:</span>
-				<input type="radio" name="stroke" id="stroke1" value="no" ng-model="strok">
-				<label for="stroke1">N/A</label>
-				<input type="radio" name="stroke" id="stroke2" value="facial drop" ng-model="strok">
-				<label for="stroke2">Facial drop</label>
-				<input type="radio" name="stroke" id="stroke3" value="arm drift" ng-model="strok">
-				<label for="stroke3">Arm drift</label>
-				<input type="radio" name="stroke" id="stroke4" value="speech impaired" ng-model="strok">
-				<label for="stroke4">Speech impaired</label>
+				<input type="radio" name="stroke" id="8_1" value="no" ng-model="strok">
+				<label for="8_1">N/A</label>
+				<input type="radio" name="stroke" id="8_2" value="facial drop" ng-model="strok">
+				<label for="8_2">Facial drop</label>
+				<input type="radio" name="stroke" id="8_3" value="arm drift" ng-model="strok">
+				<label for="8_3">Arm drift</label>
+				<input type="radio" name="stroke" id="8_4" value="speech impaired" ng-model="strok">
+				<label for="8_4">Speech impaired</label>
 			</fieldset>
 
 			<fieldset class="item">
 				<span class="obs">Pupils:</span>
-				<input type="radio" name="pupils" id="pupils1" value="normal" ng-model="pup">
-				<label for="pupils1">Normal</label>
-				<input type="radio" name="pupils" id="pupils2" value="constricted" ng-model="pup">
-				<label for="pupils2">Constricted</label>
-				<input type="radio" name="pupils" id="pupils3" value="dilated" ng-model="pup">
-				<label for="pupils3">Dilated</label>
-				<input type="radio" name="pupils" id="pupils4" value="no reaction" ng-model="pup">
-				<label for="pupils4">No reaction</label>
+				<input type="radio" name="pupils" id="9_1" value="normal" ng-model="pup">
+				<label for="9_1">Normal</label>
+				<input type="radio" name="pupils" id="9_2" value="constricted" ng-model="pup">
+				<label for="9_2">Constricted</label>
+				<input type="radio" name="pupils" id="9_3" value="dilated" ng-model="pup">
+				<label for="9_3">Dilated</label>
+				<input type="radio" name="pupils" id="9_4" value="no reaction" ng-model="pup">
+				<label for="9_4">No reaction</label>
 			</fieldset>
 
 			<fieldset class="item">
 				<span class="obs">Injury:</span>
-				<input type="radio" name="injury" id="inj1" value="no" ng-model="injury">
-				<label for="inj1">None</label>
-				<input type="radio" name="injury" id="inj2" value="blunt" ng-model="injury">
-				<label for="inj2">Blunt</label>
-				<input type="radio" name="injury" id="inj3" value="penetrating" ng-model="injury">
-				<label for="inj3">Penetrating</label>
-				<input type="radio" name="injury" id="inj4" value="burn" ng-model="injury">
-				<label for="inj4">Burn</label>
+				<input type="radio" name="injury" id="10_1" value="no" ng-model="injury">
+				<label for="10_1">None</label>
+				<input type="radio" name="injury" id="10_2" value="blunt" ng-model="injury">
+				<label for="10_2">Blunt</label>
+				<input type="radio" name="injury" id="10_3" value="penetrating" ng-model="injury">
+				<label for="10_3">Penetrating</label>
+				<input type="radio" name="injury" id="10_4" value="burn" ng-model="injury">
+				<label for="10_4">Burn</label>
 			</fieldset>
 		</div>
 	</div>
@@ -140,30 +149,31 @@
 	<div class="column">
 		<fieldset class="item">
 			<span class="obs">Past Medical History:</span>
-						<textarea rows="3" cols="80" ng-model="histjoin"></textarea>
+						<textarea id="11_1" rows="3" cols="80" ng-model="histjoin"></textarea>
 		</fieldset>
 	</div>
 	<div class="column">
 		<fieldset class="item">
 			<span class="obs">Medications:</span>
-			<textarea rows="3" cols="80" ng-model="medjoin"></textarea>
+			<textarea id="12_1" rows="3" cols="80" ng-model="medjoin"></textarea>
 		</fieldset>
 	</div>
 	<div class="column">
 		<fieldset class="item">
 			<span class="obs">Allergies:</span>
-			<textarea rows="3" cols="80" ng-model="allergyjoin"></textarea>
+			<textarea id="13_1" rows="3" cols="80" ng-model="allergyjoin"></textarea>
 		</fieldset>
 	</div>
 	<div class="column">
 		<fieldset class="item">
 			<span class="obs">Treatment:</span>
-			<textarea rows="3" cols="80" ng-model="treatjoin"></textarea>
+			<textarea id="14_1" rows="3" cols="80" ng-model="treatjoin"></textarea>
 		</fieldset>
 	</div>
 </div>
 
-
 </form>
 
 </div>
+
+<div id="results"></div>
